@@ -645,21 +645,6 @@ input[type="radio"] + label:before {
     position: relative;
 }
 
-.image:before {
-    pointer-events: none;
-    background-image: url("../../images/overlay.png");
-    background-color: rgba(19, 21, 25, 0.5);
-    border-radius: 4px;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
 .image img {
     border-radius: 4px;
     display: block;
@@ -696,11 +681,26 @@ input[type="radio"] + label:before {
 }
 
 .image.main {
+	position: relative;
     display: block;
     margin: 2.5rem 0;
+	background: linear-gradient(45deg, #241663 60%, #b92b27 100%);
+	opacity: 0.5;
     width: 100%;
+	min-height: 10rem;
+	text-align: center;
+	overflow: hidden;
 }
-
+.image.main .main-title{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translate(20%,-50%) rotate(45deg);
+	background: rgba(255,255,255,.5);
+	color: #000;
+	padding: 1rem;
+	font-size: 1.3rem;
+}
 .image.main img {
     width: 100%;
 }
@@ -898,6 +898,7 @@ ul.actions.fit.stacked {
 ul.icons {
     cursor: default;
     list-style: none;
+	padding-left: 0;
 }
 
 ul.icons li {
@@ -1270,17 +1271,6 @@ body.is-preload #bg:before {
     margin-top: 3.5rem;
 }
 
-#header > .content:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: calc(-3.5rem - 1px);
-    left: calc(50% - 1px);
-    width: 1px;
-    height: calc(3.5rem + 1px);
-    background: #ffffff;
-}
-
 #header > :first-child {
     margin-top: 0;
 }
@@ -1297,17 +1287,40 @@ body.is-preload #bg:before {
     border-radius: 100%;
     overflow: hidden;
 }
-
 #header .logo .icon:before {
     font-size: 2rem;
 }
 
 #header .content {
+	position: relative;
     border-style: solid;
     border-color: #ffffff;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
+    /* border-top-width: 1px; */
+    /* border-bottom-width: 1px; */
     max-width: 100%;
+}
+#header .content .line-top{
+	position: absolute;
+	z-index: -1;
+	width: 30%;
+	height: 30%;
+	border-top: 2px solid #69e;
+	border-left: 2px solid #69e;
+	transition: 1s;
+	transition-delay: 1s;
+}
+
+#header .content .line-bottom{
+	position: absolute;
+	z-index: -1;
+	width: 30%;
+	height: 30%;
+	right: 0;
+	bottom: 0;
+	border-right: 2px solid #f60;
+	border-bottom: 2px solid #f60;
+	transition: 1s;
+	transition-delay: 1s;
 }
 
 #header .content .inner {
@@ -1322,6 +1335,25 @@ body.is-preload #bg:before {
     padding: 3rem 2rem;
     max-height: 40rem;
     overflow: hidden;
+}
+
+#header .content:hover .line-top,
+#header .content:hover .line-bottom{
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+}
+.line-top:before{
+	content: "Welcome to my homepage";
+	font-weight: 600;
+	color: #FF6600;
+	display: block;
+	opacity: 0;
+}
+#header .content:hover .line-top:before{
+	opacity: 1;
+	transition: opacity 5s;
+	transition-delay: .5s;
 }
 
 #header .content .inner > :last-child {
@@ -1435,7 +1467,7 @@ body.is-preload #header .content .inner {
         margin-top: 2rem;
     }
 
-    #header > *:before {
+    #header > .content:before {
         top: calc(-2rem - 1px);
         height: calc(2rem + 1px);
     }
