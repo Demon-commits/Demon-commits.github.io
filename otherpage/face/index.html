@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<!--抛锚点-->
+		<div id="head" class="class"></div>
+
+		<div class="title">
+			<div class="container">
+				<h1>使用说明</h1>
+				<p>知识点掌握，了解包括Java、Spring、SpringMVC、Mybatis等的介绍和使用，以及底层的实现等；了解前端知识和框架，及其他技术。</p>
+			</div>
+		</div>
+
+		<div class="main">
+			<div style="text-align: right"><i>——天池辽阔谁相待，日日虚乘九万风</i></div>
+			<ol type="I" class="title-ol">
+				<li>
+					<h3>Java相关</h3>
+				</li>
+				<div class="sub" style="display: block;">
+					<h3>Java集合框架的四大接口</h3>
+					<codeInline>链接：<a href="https://www.cnblogs.com/yanglianwei/p/8847861.html" target="_blank">https://www.cnblogs.com/yanglianwei/p/8847861.html</a></codeInline>
+					<p>四大接口：<strong>Collection、List、Set、Map</strong></p>
+					<p>接口的常用实现类：ArrayList、LinkedList、Vector、HashSet、LinkedHashSet、TreeSet、HashMap、LinkedHashMap、TreeMap、HashTable</p>
+					<ul>
+						<li>
+							<h3>Collection</h3>
+							<p>存储无序的、不唯一的数据；其下有List和Set两大子接口。Collection可以存放各种类型数据，但是一般我们是对某一个类型的数据进行操作，此时用泛型加以约束。</p>
+						</li>
+						<li>
+							<h4>List接口</h4>
+							<p>是一个<codeInline>有序</codeInline>集合，继承自Collection接口。现已知常用实现类有：ArrayList、LinkedList、Vector。</p>
+						</li>
+						<li>
+							<h4>Set接口</h4>
+							<p>类似高中所学的集合。与List接口基本相同，但是Set接口中的元素是无序的，因此没有与下标有关的方法。例如：get(index)、remove(index)、add(index，obj)</p>
+						</li>
+						<li>
+							<h4>Map接口</h4>
+							<p>以键值对的形式存储数据，以键取值。键不能重复，值可以重复。</p>
+						</li>
+					</ul>
+					<h3>当集合元素是对象是如何处理</h3>
+					<figure class="highlight">
+						<span>对集合元素的遍历：</span>
+						<code>枚举
+							<span>Enumeration&lt;Computer&gt; elements = vector.elements();</span>
+							<span>while(elements.hasMoreElements())</span>
+							<span>{</span>
+							<span>	Computer computer = elements.nextElement();</span>
+							<span>	System.out.println(computer.toString());</span>
+							<span>}</span>
+							迭代
+							<span>Iterator&lt;Computer&gt; iterator = arrayList.iterator();</span>
+							<span>while(elements.hasMoreElements())//只输出电脑的品牌</span>
+							<span>{</span>
+							<span>	Computer computer = elements.nextElement();</span>
+							<span>	System.out.println(computer.toString());</span>
+							<span>}</span>
+							for循环（增强）
+							<span>for (Computer computer : arrayList) {</span>
+							<span>	System.out.println(computer.price);</span>
+							<span>}</span>
+						</code>
+					</figure>
+					<h3>字节流和字符流</h3>
+				</div>
+				<li>
+					<h3>Spring介绍</h3>
+				</li>
+				<div class="sub" style="display: block;">
+					<h3>概述</h3>
+					<p>Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。Spring可以使我们的开发变得简单、可测试、方便解耦、方便集成各种优秀框架等，
+					<codeInline>Spring是一个轻量级控制反转(IoC)和面向切面(AOP)的容器框架。</codeInline>
+					</p>
+					<ul>
+						<li>有序列表</li>
+						<li>有序列表</li>
+						<li>
+							<figure class="highlight">
+								<code>char a = '\u0001';
+									String a = "\u0001";
+								</code>
+							</figure>
+						</li>
+					</ul>
+				</div>
+				<li>
+					<h3>SpringMVC归纳</h3>
+				</li>
+				<div class="sub">
+					<h3>一级标题</h3>
+					<p>标题点：<codeInline>代码</codeInline>
+					</p>
+					<ul>
+						<li>有序列表</li>
+						<li>有序列表</li>
+					</ul>
+				</div>
+				<li>
+					<h3>Mybatis相关</h3>
+				</li>
+				<div class="sub">
+					<h3>一级标题</h3>
+					<p>标题点：<codeInline>代码</codeInline>
+					</p>
+					<ul>
+						<li>有序列表</li>
+						<li>有序列表</li>
+					</ul>
+				</div>
+			</ol>
+		</div>
+
+		<!--锚点-->
+		<div class="float">
+			<a href="#head" title="回到顶部">TOP</a>
+		</div>
+
+		<script>
+			$(function() {
+				$(".title-ol>li").click(function() {
+					//children() 寻找子节点
+					var sub = $(this).next(".sub");
+					sub.slideDown(500);
+					var otherSub = $(this).siblings().next(".sub");
+					otherSub.slideUp(500);
+				});
+			})
+		</script>
+	</body>
+</html>
