@@ -1288,6 +1288,7 @@ body.is-preload #bg:before {
     border-radius: 100%;
     overflow: hidden;
 }
+
 #header .logo .icon:before {
     font-size: 2rem;
 }
