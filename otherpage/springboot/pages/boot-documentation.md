@@ -16,7 +16,7 @@
 
 **译者**
 
-- [Oopsguy](https://github.com/oopsguy)
+- [***](https://github.com)
 
 ---
 
