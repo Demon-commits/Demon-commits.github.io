@@ -11,7 +11,7 @@
 
 ## 阅读方式
 
-[Github](https://https://github.com/Opamper/Opamper.github.io/tree/master/otherpage/springboot/SUMMARY.md)
+[Github](https://github.com/Opamper/Opamper.github.io/blob/master/otherpage/springboot/SUMMARY.md)
 
 ## 安装
 
