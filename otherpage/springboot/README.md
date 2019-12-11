@@ -11,7 +11,7 @@
 
 ## 阅读方式
 
-[Github](https://github.com/DocsHome/springboot/blob/master/SUMMARY.md) | [Gitbook](https://www.gitbook.com/book/docshome/springboot)
+[Github](https://github.com/Opamper/springboot/blob/master/SUMMARY.md) (https://www.gitbook.com/book/docshome/springboot)
 
 ## 安装
 
