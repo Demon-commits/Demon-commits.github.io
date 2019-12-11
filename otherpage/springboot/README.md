@@ -13,36 +13,6 @@
 
 [Github](https://github.com/Opamper/Opamper.github.io/blob/master/otherpage/springboot/SUMMARY.md)
 
-## 安装
-
-本项目使用 [GitBook](https://www.gitbook.com) 生成文档，如果您想在本地运行项目，请先安装 GitBook。
-
-安装 GitBook 命令行工具（请确保您已经安装了 [Node.js](https://nodejs.org) 和 npm）。
-
-```bash
-npm install gitbook-cli -g
-```
-
-进入项目根目录，执行以下命令安装 gitbook 依赖：
-
-```bash
-gitbook install
-```
-
-启动本地服务器在线浏览
-
-```bash
-gitbook serve
-```
-
-生成 HTML，生成的文件位于 `_book` 目录下。
-
-```
-gitbook build
-```
-
-更多文档操作，请参照 GitBook 命令。
-
 ## 项目状态
 
 > 由于是个人翻译，因此文档翻译的时限不定，根据个人业余时间调整。
