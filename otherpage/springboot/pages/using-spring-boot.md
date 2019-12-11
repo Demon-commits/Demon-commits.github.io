@@ -26,7 +26,7 @@
 
 **警告**
 
-> Spring Boot 的每一次发行都会基于一个 Spring Framework 版本，因此我们**强烈**建议您不要指定指定它的版本。
+> Spring Boot 的每一次发行都会基于一个 Spring Framework 版本，因此我们**强烈**建议您不要指定它的版本。
 
 <a id="using-boot-maven"></a>
 
